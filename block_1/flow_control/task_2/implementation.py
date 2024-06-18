@@ -1,10 +1,21 @@
-def convert_temperature(value, to_scale):
+system_str = input('''Введите F для перевода температуры из шкалы Цельсия в шкалу Фаренгейта или
+введите C для перевода температуры из шкалы Фаренгейта в шкалу Цельсия - ''')
+system = system_str.upper()
+val_str = input('Введите нужное значение температуры - ') 
+val = int(val_str)
+def convert_temp(val, system):
     """Конвертирует температуру в нужную системы счисления
 
     Args:
-        value: значение температуры
-        to_scale: система счисления, в которую нужно конвертировать значение
+        val: значение температуры
+        system: система счисления, в которую нужно конвертировать значение
 
     Returns: значение как результат конвертации
     """
-    raise NotImplementedError
+    if system == 'C':
+        return print((val - 32) * 5/9)
+    elif system == 'F':
+        return print((9/5 * val) + 32)
+    else:
+        return print(val)
+convert_temp (val, system)
