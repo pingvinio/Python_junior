@@ -12,3 +12,10 @@ def transmit_to_space(message):
 
 
 print(transmit_to_space("Test message"))
+'''
+ответ -
+Test message
+None
+потому что transmit_to_space("Test message") даёт вывод сообщения Test message,
+а последующая функция print() выводит None так как нет парамметров вывода
+'''
