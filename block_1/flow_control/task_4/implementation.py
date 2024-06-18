@@ -1,9 +1,18 @@
-def get_next_date(some_date):
+from datetime import timedelta
+import datetime
+date_str = input('Введите дату - ')
+date_input = datetime.datetime.strptime(date_str, '%Y%m%d').date()
+def get_next_day(date_input):
     """Возвращает следующую дату для заданной
 
     Args:
-        some_date: определенная исходная дата
+        next_day: определенная исходная дата
 
     Returns: следующая дата
     """
-    raise NotImplementedError
+try:
+        next_day = date_input + timedelta(days=1)
+        return print(next_day)
+    except:
+        return print('Что-то пошло не так!!!')
+get_next_day(date_input)
